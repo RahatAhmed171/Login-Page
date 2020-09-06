@@ -1,0 +1,15 @@
+<html>
+<body>
+<head>
+    <title></title>
+</head>
+<h1> Sign in to view your account</h1>
+{%block content %}
+<form method="post">
+    {%csrf_token%}
+    <input type="submit" value="Sign In">
+
+</form>
+{%endblock%}
+</body>
+</html>

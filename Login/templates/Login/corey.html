@@ -1,0 +1,17 @@
+    {% extends "Login/base.html"%}
+    {% block content%}
+    <form action="add" method="post">
+     {% csrf_token%}
+        Username:<input type="text" name="num1"><br>
+        Password:<input type="password" name="num2"><br>
+        <input type="submit">
+
+    </form>
+        {% for post in posts %}
+            <h1>{{post.title}}</h1>
+            <p> By {{post.author}} on {{post.date_posted}}</p>
+            <p> {{post.content}}</p>
+
+        {%endfor%}
+    {%endblock%}
+
