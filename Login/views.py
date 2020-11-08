@@ -27,6 +27,11 @@ class about(View):
         return render(request,self.template_name)
     def post(self,request,*args,**kwargs):
         return HttpResponseRedirect('parent')
+
+class JS_Tutorial(View):
+    template_name='Login/corey.html'
+    def get(self,request,*args,**kwargs):
+        return render(request,self.template_name)
 #def add(request):
  #   val1=request.POST['num1']
   #  val2=request.POST['num2']

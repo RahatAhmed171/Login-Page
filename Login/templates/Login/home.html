@@ -1,8 +1,432 @@
-{% extends "Login/base.html"%}
-{% block content%}
-    <p> Username=Rahat Ahmed</p>
-    <p> Password= 1234</p>
-    <p> Ae=22</p>
-    <p> Gender=Male</p>
+{%load static%}
+<html>
+<head>
+    <style>
+         body{
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-sarif;
+        background-color: white;
+        }
+        a img{
+          height: 52px;
+          width: 150px;;
+          }
+         .header{
+         background-color: silver;
 
-{%endblock%}
+         position: fixed;
+         width: 100%;
+         z-index: 3;
+
+         }
+         .header ul{
+           margin: 0;
+           padding: 0;
+           list-style: none;
+           overflow: hidden;
+           background-color: silver;
+           }
+           .header ul a{
+           display: block;
+           padding: 20px;
+           color: firebrick;
+
+           border-right: 1px solid #aaa;
+           text-decoration: none;
+           }
+           .header ul a:hover{
+             background-color: #ddd;
+             }
+           .header .logo{
+            float: left;
+            display: block;
+            font-size: 2em;
+            padding: 10px 20px;
+            }
+            .header .menu{
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+
+            }
+            .header .menu-icon{
+
+              padding: 28px 20px;
+              position: relative;
+              float: right;
+              cursor: pointer;
+
+              }
+              .header .menu-icon .nav-icon
+              {
+              background-color: firebrick;
+              display: block;
+              height: 2px;
+              width: 18px;
+              position: relative;
+              transition: background .2s ease-out;
+              }
+              .header .menu-icon .nav-icon::before{
+              background: firebrick;
+              content: "";
+              display: block;
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              top: 5px;
+              transition: all .2 ease-out;
+              }
+               .header .menu-icon .nav-icon::after{
+              background: firebrick;
+              content: "";
+              display: block;
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              top: -5px;
+               transition: all .2 ease-out;
+              }
+              .header .menu-btn{
+              display: none;
+              }
+              .header .menu-btn:checked ~ .menu{
+                 max-height: 240px;
+                 }
+               .header .menu-btn:checked ~ .menu-icon .nav-icon{
+                 background: transparent;
+               }
+               .header .menu-btn:checked ~ .menu-icon .nav-icon::before{
+                  transform: rotate(-45deg);
+                  top: 0;
+               }
+               .header .menu-btn:checked ~ .menu-icon .nav-icon::after{
+                 transform: rotate(45deg);
+                 top: 0;
+               }
+               .account-header{
+                  display: block;
+                  width: 100%;
+                  height: 50px;
+                  }
+                  .account-header h2{
+                    text-align: center;
+                    color: firebrick;
+                    font-family: Times New Roman;
+                    }
+               .account-box{
+                  display: flex;
+                  width: 90%;
+                  height: 490px;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: white;
+                  margin-left: auto;
+                  margin-right: auto;
+                  position: relative;
+                  border: 5px double silver;
+                  }
+                  .first-box{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+
+                   width: 240px;
+
+                   }
+                    .second-box{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+
+                   width: 240px;
+                   }
+                    .third-box{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+
+                   width: 240px;
+                   }
+                    .fourth-box{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+
+                   width: 240px;
+                   }
+                    .fifth-box{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+
+                   width: 240px;
+                   }
+                    .sixth-box{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+
+                   width: 240px;
+                   }
+                   form label{
+                    align-self: flex-start;
+                    font-size: 20px;
+                    font-family: Times New Roman;
+                    font-weight: bold;
+                    color: firebrick;
+                    }
+                   input[type=text]{
+                   width: 100%;
+                   font-family: Times New Roman;
+                   font-size: 15px;
+
+                   border-radius: 8px;
+                   }
+                   #button-one{
+                    background-color: lightgreen;
+                    position: absolute;
+                    bottom:8px;
+                    left: 8px;
+                    font-size: 19px;
+                    border-radius: 12px;
+                    font-family: Times New Roman;
+                    }
+                   #button-two{
+                    background-color: lightgreen;
+                    position: absolute;
+                    bottom: 8px;
+                    right: 8px;
+                    font-size: 19px;
+                    border-radius: 12px;
+                    font-family: Times New Roman;
+                    }
+                    #button-one:hover{
+                     color: red;
+                     }
+                     #button-two:hover{
+                     color: red;
+                     }
+          footer{
+   display: block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 70px;
+  width: 100%;
+
+
+
+
+}
+.bsection
+{
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                @media (min-width:48em){
+                  .header li{
+                    float: left;
+                    }
+                    .header li a{
+                      padding-left: 30px;
+                      padding: right: 30px;
+                      padding-top: 20px;
+                      padding-bottom: 25px;
+                      }
+                      .header .menu{
+                      clear: none;
+                      float: right;
+                      max-height: none;
+                      }
+                      .header .menu-icon{
+                      display: none;
+                      }
+                      }
+
+
+                       @media (max-width: 425px)
+  {
+    .header .logo{
+    padding-left: 5px;
+    }
+    }
+
+    @media (min-width: 500px)
+    {
+
+       .first-box,.second-box,.third-box,.fourth-box,.fifth-box,.sixth-box{
+          width: 300px;
+          }
+          #button-one{
+           left: 12px;
+           }
+          #button-two{
+           right: 12px;
+           }
+           }
+    @media (min-width: 600px){
+          .first-box,.second-box,.third-box,.fourth-box,.fifth-box,.sixth-box{
+          width: 330px;
+          }
+          #button-one{
+           left: 16px;
+           }
+          #button-two{
+           right: 16px;
+           }
+           input[type=text]
+           {
+             height: 30px;
+             font-size: 18px;
+             }
+             }
+    @media (min-width: 700px){
+        .account-box{
+          width: 83%;
+          }
+          #button-one{
+           left: 22px;
+           }
+          #button-two{
+           right: 22px;
+           }
+           }
+    @media (min-width: 800px){
+       .account-box{
+         align-items: flex-start;
+         height: 510px;
+         }
+         .first-box,.second-box,.third-box,.fourth-box,.fifth-box,.sixth-box{
+            padding-left: 15px;
+            }
+         #button-two{
+
+           left: 300;
+         }
+         }
+    @media (min-width: 1000px){
+       form label{
+         font-size: 23px;
+         }
+         input[type=text]{
+           height: 33px;
+           font-size: 20px;
+           }
+      .account-box{
+          height: 530px;
+          }
+          .account-header h2{
+             font-size: 32px;
+           }
+           }
+
+         
+
+    </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="/" class="logo">
+         <img src="{% static 'Login/images/logo.png'%} ">
+    </a>
+    <input class="menu-btn" type="checkbox" id="menu-btn">
+
+    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span> </label>
+    <ul class="menu">
+        <li><a href="#dont">Home</a> </li>
+        <li><a href="#forget">Services</a> </li>
+        <li><a href="#subscribe">Contact</a> </li>
+        <li><a href="#comment">Terms & Policies</a> </li>
+    </ul>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="account-header"><h2> Your Personal Information</h2></div>
+  <div class="account-box">
+      <form action="/action_page.php">
+
+         <div class="first-box">
+            <label for="fname">First name:</label>
+
+            <input type="text" id="fname" name="fname" value="Rahat" readonly>
+         </div>
+         <br>
+         <div class="second-box">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" value="Ahmed" readonly>
+         </div>
+         <br>
+
+         <div class="third-box">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="example123@gmail.com" readonly>
+         </div>
+         <br>
+
+         <div class="fourth-box">
+            <label for="Password">Password:</label>
+            <input type="text" id="Password" name="Password" value="12345678" readonly>
+         </div>
+         <br>
+
+         <div class="fifth-box">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="example123" readonly>
+        </div>
+        <br>
+
+
+        <div class="sixth-box">
+            <label for="contact">Mobile No:</label>
+            <input type="text" id="contact" name="contact" value="12345678" readonly>
+        </div>
+        <br>
+        <button type="button" id="button-one">Save Changes</button>
+        <button type="button" id="button-two">Edit</button>
+
+
+
+      </form>
+
+
+
+
+
+  </div>
+  <br>
+
+  <footer>
+    <div class="bsection">Copyright © Minute Production.  All Right Reserved.</div>
+  </footer>
+
+</body>
+</html>

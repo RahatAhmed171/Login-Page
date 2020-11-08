@@ -1,17 +1,158 @@
-    {% extends "Login/base.html"%}
-    {% block content%}
-    <form action="add" method="post">
-     {% csrf_token%}
-        Username:<input type="text" name="num1"><br>
-        Password:<input type="password" name="num2"><br>
-        <input type="submit">
 
-    </form>
-        {% for post in posts %}
-            <h1>{{post.title}}</h1>
-            <p> By {{post.author}} on {{post.date_posted}}</p>
-            <p> {{post.content}}</p>
 
-        {%endfor%}
-    {%endblock%}
 
+
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>JavaScript Tutorial</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      }
+    .overlay{
+      display: none;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      background-color: black;
+      position: fixed;
+      top: 0;
+
+
+      opacity: 0.33;
+
+
+
+
+
+     }
+     .box{
+       display: none;
+       height: 30%;
+       width: 30%;
+       box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+
+
+       margin-top: 50px;
+
+       flex-direction: column;
+       align-items: center;
+       background-color: white;
+       z-index: 2;
+       position: fixed;
+       left: 450;
+
+
+
+
+       }
+       .popup p{
+        color: black;
+        }
+        .crossbtn{
+         align-self: flex-end;
+         }
+
+
+  </style>
+</head>
+<body>
+   <div class="overlay" id="black-back">
+
+   </div>
+
+   <p>Hello</p>
+   <div class="btnbox">
+     <button class="opnbutton" id="open-button">Click here</button>
+   </div>
+
+   <div id="root">
+
+   </div>
+
+   <div class="box" id="popbox">
+            <div class="crossbtn">
+                <button class="clsbutton" id="close-button"> X </button>
+
+            </div>
+            <div class="popup">
+                Hello!
+            </div>
+
+
+   </div>
+
+
+
+
+
+<script>
+
+
+
+      setTimeout(change,5000);
+      function change(){
+        var newtext=document.querySelector('p');
+        newtext.innerHTML="<b>World.</b>";
+        }
+        var open=document.getElementById('open-button');
+        open. addEventListener('click',openbox);
+        function openbox(e){
+          e.preventDefault();
+          var openup=document.getElementById('popbox');
+          var black=document.getElementById('black-back');
+          openup.style.display="flex";
+          black.style.display="block";
+          }
+        var close=document.getElementById('close-button');
+        close.addEventListener('click',closebox);
+        function closebox(e){
+         e.preventDefault();
+         var openup=document.getElementById('popbox');
+          var black=document.getElementById('black-back');
+          openup.style.display="none";
+          black.style.display="none";
+          }
+          window.onload=function(){
+
+          var mytable=document.getElementById('root');
+          var ttable=document.createElement('table');
+
+          for(var i=0;i<5;i++){
+            var trow=document.createElement('tr');
+            for(var j=0;j<2;j++){
+               var tcolumn=document.createElement('td');
+                var cellText = document.createTextNode("data");
+                tcolumn.appendChild(cellText);
+                trow.appendChild(tcolumn);
+
+               }
+
+             ttable.appendChild(trow);
+             }
+             ttable.setAttribute("border", "2")
+             mytable.appendChild(ttable);
+             };
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

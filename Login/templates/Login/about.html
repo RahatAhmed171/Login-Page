@@ -1,15 +1,94 @@
-<html>
-<body>
-<head>
-    <title></title>
-</head>
-<h1> Sign in to view your account</h1>
-{%block content %}
-<form method="post">
-    {%csrf_token%}
-    <input type="submit" value="Sign In">
 
-</form>
-{%endblock%}
+{% load static %}
+<html>
+
+<head>
+   <link rel="stylesheet" href="{%static 'Login/css/main.css'%}">
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="logo">
+             <img src="{% static 'Login/images/logo.png'%} ">
+        </a>
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span> </label>
+        <ul class="menu">
+            <li><a href="#dont">Home</a> </li>
+            <li><a href="#forget">Services</a> </li>
+            <li><a href="#subscribe">Contact</a> </li>
+            <li><a href="#comment">Terms & Policies</a> </li>
+        </ul>
+    </header>
+
+        <div class="header-image">
+             <img src="{% static 'Login/images/header.jpg'%} ">
+             <div class="header-text"><h2>All-in-one Agency for Your Business</h2></div>
+             <button type="button">Get Started</button>
+        </div>
+        <div class="subhead"><h2>Our Services</h2></div>
+        <div class="video">
+            <img src="{% static 'Login/images/video-production.jpg'%} ">
+            <h4> Video Production</h4>
+            <p>Motion graphics, Shoot based commercial, OVC Cinematography, Event Cover, Animation</p>
+
+
+        </div>
+        <br>
+
+        <div class="web">
+            <img src="{% static 'Login/images/web-dev.png'%}">
+            <h4> Web Development</h4>
+            <p>Contact and build your relationships with your customers and prospects and also demonstrate your skills in marketing</p>
+        </div>
+        <br>
+
+        <div class="brand">
+            <img src="{% static 'Login/images/brand.png'%}">
+            <h4> Branding </h4>
+
+            <p>Connect your audience to build your brand, increase sales and drive traffic through social media</p>
+        </div>
+
+
+
+        <div class="container">
+            <div class="video-box">
+                 <img src="{% static 'Login/images/video-production.jpg'%} ">
+                 <h4> Video Production</h4>
+                 <p>Motion graphics, Shoot based commercial, OVC Cinematography, Event Cover, Animation</p>
+
+            </div>
+            <div class="web-box">
+                  <img src="{% static 'Login/images/web-dev.png'%}">
+                  <h4> Web Development</h4>
+                  <p>Contact and build your relationships with your customers and prospects and also demonstrate your skills in marketing</p>
+
+            </div>
+            <div class="brand-box">
+                <img src="{% static 'Login/images/brand.png'%}">
+                <h4> Branding </h4>
+
+                <p>Connect your audience to build your brand, increase sales and drive traffic through social media</p>
+
+            </div>
+        </div>
+        <div class="Login">
+            <h4> Already a member of our agency? Sign In here</h4>
+            {%block content %}
+            <form method="post">
+                {%csrf_token%}
+                <input type="submit" value="Sign In">
+
+            </form>
+            {%endblock%}
+        </div>
+        <br>
+        <footer>
+        <div class="bsection">Copyright © Minute Production.  All Right Reserved.</div>
+        </footer>
+      
+
 </body>
 </html>
