@@ -1,0 +1,154 @@
+@import 'home-media-query';
+@import "homepage-colors";
+
+@mixin service-container(){
+    display: flex;
+    width: 100%;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+@mixin service-font-style(){
+    font-family: $font-family;
+    text-align: center;
+    font-size: 17px;
+   }
+@mixin service-hover(){
+    border-top: 1px solid firebrick;
+    border-bottom: 1px solid firebrick;
+    cursor: pointer;
+   }
+
+
+   
+
+@mixin box-at-500px(){
+       width: 90%;
+       margin-left: auto;
+       margin-right: auto;
+       border-left: 1px solid gainsboro;
+       border-right: 1px solid gainsboro;
+}
+@mixin box-hover-at-500px(){
+    border-left: 1px solid firebrick;
+    border-right: 1px solid firebrick;
+}
+
+
+
+
+
+
+.video{
+    @include service-container();
+    @include media(">=500px"){
+        @include box-at-500px();
+    }
+    @include media(">=700px"){
+        width: 85%;
+    }
+    @include media(">=735px"){
+        display: none;
+    }
+
+    &:hover{
+        @include service-hover();
+        @include media(">=500px"){
+            @include box-hover-at-500px();
+        }
+    }
+}
+.web{
+    @include service-container();
+    @include media(">=500px"){
+        @include box-at-500px();
+    }
+    @include media(">=700px"){
+        width: 85%;
+    }
+    @include media(">=735px"){
+        display: none;
+    }
+    &:hover{
+        @include service-hover();
+        @include media(">=500px"){
+            @include box-hover-at-500px();
+        }
+    }
+}
+.brand{
+    @include service-container();
+    @include media(">=500px"){
+        @include box-at-500px();
+    }
+    @include media(">=700px"){
+        width: 85%;
+    }
+    @include media(">=735px"){
+        display: none;
+    }
+    &:hover{
+        @include service-hover();
+        @include media(">=500px"){
+            @include box-hover-at-500px();
+        }
+    }
+}
+
+.video{
+    >h4{
+       @include service-font-style();
+    }
+    >p{
+       @include service-font-style();
+       @include media(">=327px","<=425px"){
+             padding-right: 5px;
+             padding-left: 5px;
+       }
+    }
+    > img{
+        height: 55px;
+        width: 100px;
+    }
+}
+
+.web{
+    >h4{
+        @include service-font-style(); 
+    }
+    >p{
+        @include service-font-style();
+        padding-right: 5px;
+        padding-left: 5px;
+        @include media(">=327px","<=425px"){
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    }
+    >img{
+        height: 40px;
+        width: 50px;
+    }
+}
+
+.brand{
+    >h4{
+        @include service-font-style();
+    }
+    >p{
+        @include service-font-style();
+        padding-right: 9px;
+        padding-left: 9px;
+    }
+    >img{
+        height: 60px;
+        width: 100px;
+    }
+}
+
+
+
+

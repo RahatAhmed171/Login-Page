@@ -1,0 +1,83 @@
+@import "header-media-query";
+@import "header-colors";
+
+$nav-bar-display: block;
+
+
+
+
+   
+.header{
+  .menu-btn{
+    display: none;
+    }
+
+  .menu-icon{
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    @include media(">=tablet"){
+        display: none;
+    }
+
+    }
+}
+     
+.header>.menu-icon>.nav-icon{
+  background-color: $menu-bar-color;
+  display: $nav-bar-display;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background .2s ease-out;
+
+  &::before{
+    background: $menu-bar-color;
+    content: "";
+    display: $nav-bar-display;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    transition: all .2 ease-out;
+  }
+  &::after{
+    background: $menu-bar-color;
+    content: "";
+    display: $nav-bar-display;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -5px;
+    transition: all .2 ease-out;
+  }
+}
+
+  
+
+.menu-btn{
+  &:checked ~ .menu{
+      max-height: 240px;
+   }
+  &:checked ~ .menu-icon > .nav-icon{
+      background: transparent;
+        
+   }
+  &:checked ~ .menu-icon > .nav-icon::before{
+      transform: rotate(45deg);
+      top: 0;
+   }
+  &:checked ~ .menu-icon > .nav-icon::after{
+      transform: rotate(-45deg);
+      top: 0;
+   }
+    
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-sarif;
+  background-color: $body-background-color;
+  }

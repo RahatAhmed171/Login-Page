@@ -20,7 +20,7 @@
         <entry file="file://$USER_HOME$/PycharmProjects/Rahat/cmon.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+              <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -28,7 +28,7 @@
       <file leaf-file-name="parent.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Login/templates/Login/parent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="5253">
               <caret line="309" selection-start-line="309" selection-end-line="354" selection-end-column="7" />
             </state>
           </provider>
@@ -74,7 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1260" />
@@ -227,19 +227,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.3317647" visible="true" weight="0.16136725" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.33023256" visible="true" weight="0.15659778" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.34108528" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="0" />
-      <window_info id="Structure" order="2" sideWeight="0.6682353" side_tool="true" visible="true" weight="0.16136725" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.34108528" />
+      <window_info id="Structure" order="2" sideWeight="0.66976744" side_tool="true" visible="true" weight="0.15659778" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -538,7 +537,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Login/templates/Login/parent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="5253">
           <caret line="309" selection-start-line="309" selection-end-line="354" selection-end-column="7" />
         </state>
       </provider>
@@ -546,7 +545,7 @@
     <entry file="file://$USER_HOME$/PycharmProjects/Rahat/cmon.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
         </state>
       </provider>
     </entry>

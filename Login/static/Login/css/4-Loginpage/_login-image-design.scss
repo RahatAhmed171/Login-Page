@@ -1,0 +1,69 @@
+@import 'login-media-query';
+@import "loginpage-colors";
+
+
+.box {
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    @include media(">=500px","<=675px"){
+        width: 75%;
+    }
+    @include media(">=676px","<=1250px"){
+        flex-direction: row;
+    }
+    @include media(">=676px","<=1440px"){
+        padding-top: 25px;
+    }
+    @include media(">=900px","<=1440px"){
+        flex-direction: row;
+        width: 70%;
+    }
+}
+.icon {
+
+    width: 100%;
+    border: 5px double gainsboro;
+    @include media(">=676px","<=1250px"){
+        height: 100%;
+        background-color: $login-icon-background;
+    }
+    @include media(">=900px","<=1440px"){
+        height: 100%;
+        background-color: $login-icon-background;
+    }
+    > h2{
+        display: none;
+        @include media(">=676px","<=1250px"){
+            display: block;
+            text-align: center;
+            font-family: $font-family;
+            color: $login-icon-text;
+            padding-bottom: 15px;
+
+        }
+        @include media(">=900px","<=1440px"){
+            display: block;
+           text-align: center;
+           font-family: $font-family;
+           color: $login-icon-text;
+           padding-bottom: 15px;
+
+        }
+
+        }
+    > img{
+        height: 200px;
+        width: 100%;
+
+     }
+    }
+
+
+
+
+

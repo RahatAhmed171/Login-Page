@@ -1,0 +1,184 @@
+@import 'home-media-query';
+@import "homepage-colors";
+
+@mixin design(){
+    display: flex;
+    width: 50%;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gainsboro;
+    margin-left: 7px;
+
+}
+@mixin font-style(){
+    font-family: $font-family;
+    text-align: center;
+    font-size: 17px;
+
+}
+@mixin hover(){
+    border: 1px solid firebrick;
+    cursor: pointer;
+}
+
+
+
+
+.container{
+    display: none;
+    @include media(">=735px"){
+        display: flex;
+        height: 560px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        position: relative;
+    }
+    @include media(">=950px"){
+        width: 95%;
+        height: 300px;
+    }
+  }
+
+
+
+  .video-box{
+      @include media(">=735px"){
+          @include design();
+      }
+      
+      &:hover{
+          @include media(">=735px"){
+            @include hover();
+          }
+      }
+    
+  }
+
+
+  .web-box{
+    @include media(">=735px"){
+        @include design();
+    }
+    @include media(">=950px"){
+        margin-right: 7px;
+    }
+    
+    &:hover{
+         @include media(">=735px"){
+            @include hover();
+    }
+}
+}
+
+.brand-box{
+    @include media(">=735px"){
+        @include design();
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include media(">=950px"){
+        position: static;
+        margin-left: 0;
+        margin-right: 0;
+        margin-left: 7px;
+    }
+    &:hover{
+        @include media(">=735px"){
+            @include hover();
+        }
+    }
+}
+
+
+.video-box{
+    
+    >h4{
+        @include media(">=735px"){
+            @include font-style();
+        }
+
+    }
+    >p{
+        @include media(">=735px"){
+            @include font-style();
+        }
+
+    }
+    >img{
+        @include media(">=735px"){
+            height: 55px;
+            width: 100px;
+        }
+
+    }
+
+}
+
+
+.web-box{
+    
+    >h4{
+        @include media(">=735px"){
+            @include font-style();
+        }
+
+    }
+    >p{
+        @include media(">=735px"){
+            @include font-style();
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+    }
+    >img{
+        @include media(">=735px"){
+            height: 40px;
+            width: 50px;
+        }
+
+    }
+
+}
+
+
+.brand-box{
+    
+    >h4{
+        @include media(">=735px"){
+            @include font-style();
+        }
+
+    }
+    >p{
+        @include media(">=735px"){
+            @include font-style();
+            padding-right: 9px;
+            padding-left: 9px;
+        }
+
+    }
+    >img{
+        @include media(">=735px"){
+            height: 60px;
+            width: 100px;
+        }
+
+    }
+
+}
+
+
+
+
+  
+
+  

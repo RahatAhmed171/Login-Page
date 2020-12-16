@@ -1,0 +1,53 @@
+@import 'account-media-query';
+@import "accountpage-colors";
+
+
+
+.button-properties{
+    background-color: $button-background;
+    position: absolute;
+    bottom:8px;
+    
+    font-size: 19px;
+    border-radius: 12px;
+    font-family: $font-family;
+    &:hover{
+        color: $button-hover;
+    }
+
+}
+
+#button-one{
+    @extend .button-properties;
+    left: 8px;
+
+    @include media(">=500px"){
+        left: 12px;
+    }
+    @include media(">=600px"){
+        left: 16px;
+    }
+    @include media(">=700px"){
+        left: 22px;
+    }
+    }
+
+#button-two{
+    @extend .button-properties;
+    
+    right: 8px;
+       @include media(">=500px"){
+        right: 12px;
+    }
+    @include media(">=600px"){
+        right: 16px;
+    }
+    @include media(">=700px"){
+        right: 22px;
+    }
+    @include media(">=800px"){
+        left: 300;
+    }
+  
+    }
+    

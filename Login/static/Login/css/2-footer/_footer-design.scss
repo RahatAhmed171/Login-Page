@@ -1,0 +1,21 @@
+@import "footer-colors";
+
+footer{
+   display: block;
+   background-color: $footer-background-color;
+   color: $footer-text-color;
+   text-align: center;
+   height: 70px;
+   width: 100%;
+}
+
+ 
+ 
+ 
+ 
+footer{
+    .bsection
+    {
+        padding-top: 20px;
+    }
+}
